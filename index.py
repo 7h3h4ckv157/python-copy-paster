@@ -2,11 +2,25 @@ import urllib
 import random
 import time
 import pyperclip
-# chosen file
-filename = 'bee-movie-script.txt'
+filename = False
 lineRn = 0 # For ordered mode
-randomVal = 0;
-copyTime = False;
+randomVal = 0
+copyTime = False
+
+def getFile():
+    print("What is your file called?")
+    x = input()
+    if ".txt" in x:
+        global filename;
+        filename = x;
+        try:
+            f = open(filename, 'r')
+        except:
+            print("This file is not found, please try again\n")
+            getFile()
+    else:
+        print("This is not a text file, please try again.\n")
+        getFile()
 
 def getDelay():
     print("Start time in seconds?\n")
@@ -81,6 +95,7 @@ def getLines():
     pyperclip.copy(text)
     print(text)
 
+getFile()
 randomOrOrdered()
 
 # Open the file and read lines
@@ -94,6 +109,4 @@ with open(filename, 'r') as infile:
         time.sleep(copyTime)
 
 # Changes:
-    # Input to select file name => so it's not hard coded in
-    # And an algorithmn that organizes text files properly with a certain range of characters per line
     # Updated readme and more info there
