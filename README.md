@@ -7,3 +7,6 @@
 [Requires pyperclip](https://pypi.org/project/pyperclip/)
 
 `pip install pyperclip`
+
+
+[Released Versions](https://github.com/Sajantoor98/python-copy-paster/releases)
