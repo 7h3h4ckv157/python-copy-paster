@@ -10,3 +10,6 @@
 
 
 [Released Versions](https://github.com/Sajantoor98/python-copy-paster/releases)
+
+# License
+### MIT
